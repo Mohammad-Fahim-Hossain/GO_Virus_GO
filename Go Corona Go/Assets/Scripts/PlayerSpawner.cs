@@ -9,6 +9,16 @@ public class PlayerSpawner : MonoBehaviour
     public GameObject ScoreText;
     public GameObject HealthBar;
 
+    public static PlayerSpawner PlayerSpawnerInstance = null;
+
+     void Awake()
+    {
+        if (PlayerSpawnerInstance == null)
+        {
+            PlayerSpawnerInstance = this;
+        }
+    }
+
     public void ContinueGame()
     {
         GameManager.Instance.StopDesObject();
