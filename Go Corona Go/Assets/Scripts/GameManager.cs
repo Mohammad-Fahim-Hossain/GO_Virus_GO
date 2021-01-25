@@ -151,6 +151,7 @@ public class GameManager : MonoBehaviour
 
 
             AdsManuManager.adsManuManagerInstance.ShowFullScreenAd();
+            AdsManuManager.adsManuManagerInstance.ReqFullScreenAd();
             
 
             GameOverText.text = Score.ToString();
@@ -165,7 +166,7 @@ public class GameManager : MonoBehaviour
 
             ContinueButtonTrigger++;
 
-           if (ContinueButtonTrigger == 3)
+           if (ContinueButtonTrigger == 2)
             {
                 ContinueButton.SetActive(false);
             }

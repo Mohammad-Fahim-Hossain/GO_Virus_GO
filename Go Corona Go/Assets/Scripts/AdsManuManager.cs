@@ -8,7 +8,7 @@ public class AdsManuManager : MonoBehaviour
 {
     public static AdsManuManager adsManuManagerInstance;
 
-    private string AppID = "ca-app-pub-3940256099942544~3347511713";
+    //private string AppID = "ca-app-pub-3940256099942544~3347511713";
 
     private BannerView Bannerview;
     private string BannerId = "ca-app-pub-3940256099942544/6300978111";
@@ -37,7 +37,9 @@ public class AdsManuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MobileAds.Initialize(AppID);
+        //MobileAds.Initialize(AppID);
+
+        MobileAds.Initialize(initStatus => { });
 
         ReqRewardedAd();
 
