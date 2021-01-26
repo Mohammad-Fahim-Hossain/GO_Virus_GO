@@ -82,20 +82,20 @@ public class Movement : MonoBehaviour
   
            if (LifeActive)
            {
-               LifeSpawner.LifeSpawnerInstance.Life.GetComponent<Rigidbody2D>().gravityScale = LifeSpawner.LifeSpawnerInstance.Life.GetComponent<Rigidbody2D>().gravityScale + 0.015f;
+               LifeSpawner.LifeSpawnerInstance.Life.GetComponent<Rigidbody2D>().gravityScale = LifeSpawner.LifeSpawnerInstance.Life.GetComponent<Rigidbody2D>().gravityScale + 0.02f;
            }
            if (ShieldActive)
            {
-               ShieldSpawner.ShieldSpawnerInstance.Shield.GetComponent<Rigidbody2D>().gravityScale = ShieldSpawner.ShieldSpawnerInstance.Shield.GetComponent<Rigidbody2D>().gravityScale + 0.015f;
+               ShieldSpawner.ShieldSpawnerInstance.Shield.GetComponent<Rigidbody2D>().gravityScale = ShieldSpawner.ShieldSpawnerInstance.Shield.GetComponent<Rigidbody2D>().gravityScale + 0.02f;
 
            }
            if (BonusActive)
            {
-               VaccineBonusSpawner.VaccineBonusSpawnerInstance.VaccineBonus.GetComponent<Rigidbody2D>().gravityScale = VaccineBonusSpawner.VaccineBonusSpawnerInstance.VaccineBonus.GetComponent<Rigidbody2D>().gravityScale + 0.015f;
+               VaccineBonusSpawner.VaccineBonusSpawnerInstance.VaccineBonus.GetComponent<Rigidbody2D>().gravityScale = VaccineBonusSpawner.VaccineBonusSpawnerInstance.VaccineBonus.GetComponent<Rigidbody2D>().gravityScale + 0.02f;
            }
 
-           VaccineSpawner.VaccineSpawnerInstance.Vaccine.GetComponent<Rigidbody2D>().gravityScale = VaccineSpawner.VaccineSpawnerInstance.Vaccine.GetComponent<Rigidbody2D>().gravityScale + 0.01f;
-           EnemySpawner.EnemySpawnerInstance.Enemy.GetComponent<Rigidbody2D>().gravityScale= EnemySpawner.EnemySpawnerInstance.Enemy.GetComponent<Rigidbody2D>().gravityScale+0.03f;
+           VaccineSpawner.VaccineSpawnerInstance.Vaccine.GetComponent<Rigidbody2D>().gravityScale = VaccineSpawner.VaccineSpawnerInstance.Vaccine.GetComponent<Rigidbody2D>().gravityScale + 0.015f;
+           EnemySpawner.EnemySpawnerInstance.Enemy.GetComponent<Rigidbody2D>().gravityScale= EnemySpawner.EnemySpawnerInstance.Enemy.GetComponent<Rigidbody2D>().gravityScale+0.04f;
 
            Debug.Log(EnemySpawner.EnemySpawnerInstance.Enemy.GetComponent<Rigidbody2D>().gravityScale);
 

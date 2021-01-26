@@ -35,6 +35,7 @@ public class PlayerSpawner : MonoBehaviour
         Instantiate(Player, new Vector2(0, -3.282402f), Quaternion.identity);
         ScoreText.SetActive(true);
         HealthBar.SetActive(true);
+        GameManager.Instance.PauseButton.SetActive(true);
 
         GameOverPlaner.SetActive(false);
 

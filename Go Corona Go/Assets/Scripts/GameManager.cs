@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     private GameObject Life;
     private GameObject Shield;
 
+    public GameObject PauseButton=null;
+
     private void Awake()
     {
         if (Instance == null) {
@@ -135,6 +137,8 @@ public class GameManager : MonoBehaviour
 
         if (playerHealth == 0f)
         {
+            PauseButton.SetActive(false);
+
             IsOver = true;
             GameOverPanelActivate = true;
 

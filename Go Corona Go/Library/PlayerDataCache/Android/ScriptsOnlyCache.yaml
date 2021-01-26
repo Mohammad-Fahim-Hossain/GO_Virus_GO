@@ -26,8 +26,6 @@ ScriptsOnlyBuild:
     - csDestroyEffect
     GoogleMobileAds.Editor.dll:
     - GoogleMobileAds.Editor.GoogleMobileAdsSettings
-    GoogleMobileAds.dll:
-    - GoogleMobileAds.Common.MobileAdsEventExecutor
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -141,7 +139,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11242}
     - Class: 114
-      Script: {instanceID: 16180}
+      Script: {instanceID: 13976}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -706,7 +704,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: a5ca80e8b8210aa5c2374e5488f7ca06
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelManager
@@ -1270,7 +1268,7 @@ ScriptsOnlyBuild:
     className: MobileControlRig
   - hash:
       serializedVersion: 2
-      Hash: 3a3f8243dd0c09b964d773e051e87565
+      Hash: 2f028d709ecf7079a08dae1075c8f0ee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
