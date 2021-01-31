@@ -11,23 +11,22 @@ public class AdsManuManager : MonoBehaviour
     //private string AppID = "ca-app-pub-3940256099942544~3347511713";
 
     private BannerView Bannerview;
-    private string BannerId = "ca-app-pub-3940256099942544/6300978111";
+    private string BannerId = "ca-app-pub-5685272548656974/7407592820";
+    //private string TestBannerId = "ca-app-pub-3940256099942544/6300978111";
 
     private InterstitialAd FullScreenAd;
-    private string FullScreenAdID = "ca-app-pub-3940256099942544/8691691433";
+    private string FullScreenAdID = "ca-app-pub-5685272548656974/9873974069";
+    //private string TestFullScreenAdID = "ca-app-pub-3940256099942544/8691691433";
 
     private RewardedAd rewardedAd;
-    private string rewardADID = "ca-app-pub-3940256099942544/5224354917";
+    private string rewardADID = "ca-app-pub-5685272548656974/3308565710";
+    //private string TestrewardADID = "ca-app-pub-3940256099942544/5224354917";
 
     private void Awake()
     {
-        if (adsManuManagerInstance==null)
+        if (adsManuManagerInstance == null)
         {
             adsManuManagerInstance = this;
-        }
-        else
-        {
-            Destroy(adsManuManagerInstance);
         }
         
        

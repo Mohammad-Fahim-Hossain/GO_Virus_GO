@@ -47,6 +47,8 @@ public class Movement : MonoBehaviour
  
     public bool AIspeedTrigger = true;
 
+    public bool faceMovement = true;
+
    
     
   
@@ -96,6 +98,7 @@ public class Movement : MonoBehaviour
 
            VaccineSpawner.VaccineSpawnerInstance.Vaccine.GetComponent<Rigidbody2D>().gravityScale = VaccineSpawner.VaccineSpawnerInstance.Vaccine.GetComponent<Rigidbody2D>().gravityScale + 0.015f;
            EnemySpawner.EnemySpawnerInstance.Enemy.GetComponent<Rigidbody2D>().gravityScale= EnemySpawner.EnemySpawnerInstance.Enemy.GetComponent<Rigidbody2D>().gravityScale+0.04f;
+            EnemySpawner.EnemySpawnerInstance.Enemy.GetComponent<Enemy>().RotateSpeed = EnemySpawner.EnemySpawnerInstance.Enemy.GetComponent<Enemy>().RotateSpeed - 0.1f;
 
            Debug.Log(EnemySpawner.EnemySpawnerInstance.Enemy.GetComponent<Rigidbody2D>().gravityScale);
 
@@ -265,11 +268,11 @@ public class Movement : MonoBehaviour
     }
 
     void CheckWhereToFace() {
-        if (DirectX > 0)
+        if (DirectX > 0 && faceMovement)
             FaceLeft = false;
-        else if (DirectX < 0)
+        else if (DirectX < 0 && faceMovement)
             FaceLeft = true;
-        if (((FaceLeft) && (LocalScale.x < 0)) || ((!FaceLeft) && (LocalScale.x > 0)))
+        if (((FaceLeft) && (LocalScale.x < 0) && faceMovement) || ((!FaceLeft) && (LocalScale.x > 0) && faceMovement))
             LocalScale.x *= -1;
 
         transform.localScale = LocalScale;

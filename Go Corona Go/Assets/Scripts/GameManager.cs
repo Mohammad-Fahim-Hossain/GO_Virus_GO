@@ -15,9 +15,13 @@ public class GameManager : MonoBehaviour
     public GameObject MainCamera;
     private AudioSource bgMusic;
     private GameObject Par;
+    public Text HighScore;
 
     public AudioClip Cough1;
     public AudioClip Cough2;
+
+    public GameObject Instruction;
+    public GameObject HowToPlayText;
 
 
     public GameObject ContinueButton;
@@ -57,12 +61,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Instruction.SetActive(true);
+        HowToPlayText.SetActive(true);
+
         AdsManuManager.adsManuManagerInstance.ReqFullScreenAd();
         
 
         ContinueButtonTrigger = 0;
         playerHealth = 100f;
         InvokeRepeating("ParticleDes", 1f, 0.45f);
+
+        Invoke("InstructionDisable", 4);
 
     }
 
@@ -84,6 +93,12 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(GameOverPanelAct());
         }
+    }
+
+    public void InstructionDisable()
+    {
+        HowToPlayText.SetActive(false);
+        Instruction.SetActive(false);
     }
 
     IEnumerator GameOverPanelAct()
@@ -112,11 +127,28 @@ public class GameManager : MonoBehaviour
             bgMusic.pitch = 1.05f;
             
         }
-        if (Score >= 250)
+        if (Score >= 200 && Score < 300)
         {
             bgMusic.pitch = 1.1f;
     
         }
+        if (Score >= 300 && Score < 400)
+        {
+            bgMusic.pitch = 1.1f;
+
+        }
+        if (Score >= 400 && Score < 500)
+        {
+            bgMusic.pitch = 1.15f;
+
+        }
+        if (Score >= 500 && Score < 600)
+        {
+            bgMusic.pitch = 1.2f;
+
+        }
+
+
     }
 
     private void FixedUpdate()
@@ -159,6 +191,13 @@ public class GameManager : MonoBehaviour
             
 
             GameOverText.text = Score.ToString();
+
+            if (Score>PlayerPrefs.GetInt("HighScore"))
+            {
+                PlayerPrefs.SetInt("HighScore", Score);
+            }
+
+            HighScore.text = PlayerPrefs.GetInt("HighScore").ToString();
             
             ScoreText.gameObject.SetActive(false);
             HealthUI.SetActive(false);
